@@ -23,6 +23,9 @@
 .hp-migrated .hp-footer{background:#f6f8fb;border-top:1px solid var(--hp-border);color:#526077;font-size:14px;padding:28px 20px}
 .hp-migrated .hp-footer a{color:var(--hp-navy)}
 .hp-migrated .hp-call{box-shadow:0 6px 22px #176d4626;padding:12px 20px}
+.hp-migrated .hp-call{display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:transform .18s ease,box-shadow .18s ease}
+.hp-migrated .hp-call-icon{flex:none}
+.hp-migrated .hp-call:hover{transform:translateY(-2px);box-shadow:0 8px 26px #176d4638}
 .hp-migrated .hp-quote{border:1px solid var(--hp-border);box-shadow:0 12px 40px #233e7009;border-radius:18px;padding:32px}
 .hp-migrated .hp-quote h2{color:var(--hp-navy)}
 .hp-migrated .hp-quote input:not([type=checkbox]),.hp-migrated .hp-quote select,.hp-migrated .hp-quote textarea{border-color:#cad4e0;border-radius:9px}
@@ -40,4 +43,7 @@
   .hp-migrated .hp-mobile-navigation nav a:hover,.hp-migrated .hp-mobile-navigation nav a[aria-current=page]{background:#edf3fa;color:var(--hp-navy);font-weight:700}
   .hp-migrated .hp-mobile-navigation nav a:focus-visible{outline-offset:-3px}
   .hp-migrated #main-content{scroll-margin-top:90px}
+  .hp-migrated .hp-call{width:58px;height:58px;box-sizing:border-box;border-radius:50%;padding:0;left:16px;bottom:calc(18px + env(safe-area-inset-bottom,0px));border:3px solid white;box-shadow:0 5px 18px #176d4638}
+  .hp-migrated .hp-call-icon{width:25px;height:25px}
+  .hp-migrated .hp-call-label{display:none}
 }
