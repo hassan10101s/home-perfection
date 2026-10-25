@@ -1,0 +1,43 @@
+import { readFile, access, writeFile, readdir } from 'node:fs/promises';
+import path from 'node:path';
+import assert from 'node:assert/strict';
+import { load } from 'cheerio';
+const manifest=JSON.parse(await readFile('content/manifest.json','utf8'));
+const baseline=JSON.parse(await readFile('migration/baseline.json','utf8'));
+const root='.output/public';let images=0,links=0;const errors=[];
+const redirects=new Map([['/company-services/','/moving-furniture-riyadh/'],['/نقل-عفش-الرس/','/شركة-نقل-عفش-بالقصيم/']]);
+const normalize=p=>decodeURI(p).replace(/\/$/,'')||'/';const paths=new Set(manifest.map(p=>normalize(p.path)));
+for(const item of manifest){
+ try{
+  const html=await readFile(path.join(root,item.path,'index.html'),'utf8');const $=load(html);const meta=JSON.parse(await readFile(`content/pages/${item.id}.json`,'utf8'));
+  assert.equal($('title').text(),meta.title,'title changed');assert.equal($('link[rel=canonical]').attr('href'),meta.canonical,'canonical changed');
+  for(const m of meta.meta.filter(m=>m.name==='description'||m.property?.startsWith('og:')))assert.equal($(`meta[${m.name?'name':'property'}="${m.name||m.property}"]`).attr('content'),m.content,`metadata changed: ${m.name||m.property}`);
+  assert.equal($('script[type="application/ld+json"]').length,meta.schema.length,'schema missing');
+  const original=load(await readFile(`content/pages/${item.id}.html`,'utf8'));
+  const text=s=>s.replace(/\s+/g,' ').trim();assert.ok(text($('#main-content').text()).includes(text(original('body').text())),'page text missing');
+  assert.equal($('#main-content h1').length,original('h1').length,'H1 changed');
+  assert.deepEqual($('#main-content .hp-page-content h1, #main-content .hp-page-content h2, #main-content .hp-page-content h3').map((_,e)=>$(e).text().replace(/\s+/g,'')).get(),baseline.pages.find(p=>p.id===item.id).headings.map(s=>s.replace(/\s+/g,'')),'original headings changed');
+  assert.equal($('#main-content script').length,0,'legacy scripts remain');assert.equal($('[onclick],[onerror],[onload]').length,0,'inline event handlers remain');
+  const tasks=[];
+  $('img[src],source[src],source[srcset],video[src],link[rel=stylesheet],link[rel=icon],link[rel=apple-touch-icon]').each((_,el)=>{const n=$(el);const urls=n.attr('srcset')?n.attr('srcset').split(',').map(s=>s.trim().split(/\s+/)[0]):[n.attr('src')||n.attr('href')];for(const u of urls){if(u?.startsWith('/')){images++;tasks.push(access(path.join(root,decodeURI(u.split('?')[0]))).catch(()=>errors.push(`${item.path}: missing asset ${u}`)))}}});
+  $('a[href]').each((_,el)=>{const href=$(el).attr('href');if(href.startsWith('/')&&!href.startsWith('//')){const u=new URL(href,'https://homeperfectionnow.com');if(!u.search&&!/\.[a-z0-9]+$/i.test(u.pathname)){links++;if(!paths.has(normalize(u.pathname))&&!redirects.has(decodeURI(u.pathname)))errors.push(`${item.path}: broken link ${href}`)}}});
+  await Promise.all(tasks);
+ }catch(e){errors.push(`${item.path}: ${e.message}`)}
+}
+await access(`${root}/404.html`).catch(()=>errors.push('404.html missing'));
+let cssReferences=0;
+for(const file of await readdir(root,{recursive:true})){
+ if(!file.endsWith('.css'))continue;
+ const css=await readFile(path.join(root,file),'utf8');
+ for(const match of css.matchAll(/url\(\s*['"]?([^'"\s)]+)['"]?\s*\)/g)){
+  if(!match[1].startsWith('/')||match[1].startsWith('//'))continue;
+  cssReferences++;const asset=decodeURI(match[1].split(/[?#]/)[0]);
+  await access(path.join(root,asset)).catch(()=>errors.push(`CSS ${file}: missing ${asset}`));
+ }
+}
+const buildInfo=JSON.parse(await readFile(`${root}/build-info.json`,'utf8'));
+const rootHtml=load(await readFile(`${root}/index.html`,'utf8'));
+if(buildInfo.environment==='production')assert.ok(!/noindex/.test(rootHtml('meta[name=robots]').attr('content')||''),'production is noindex');
+const headers=await readFile(`${root}/_headers`,'utf8');assert.ok(headers.includes("object-src 'none'")&&headers.includes("frame-ancestors 'none'"));
+const report={date:new Date().toISOString(),environment:buildInfo.environment,pages:manifest.length,assetReferences:images,cssReferences,internalLinks:links,errors,sourceBrokenLinks:baseline.failures,notes:['Tracking is restricted to the production build on homeperfectionnow.com.','Source Elementor content is retained as separate HTML files; the app shell and quote form are Vue components.']};
+await writeFile('migration/verification.json',JSON.stringify(report,null,2));console.log(JSON.stringify(report,null,2));if(errors.length)process.exitCode=1;

@@ -1,0 +1,7 @@
+{
+  "scripts": [
+    "https://www.googletagmanager.com/gtag/js?id=GT-PHG6CN3",
+    "https://www.googletagmanager.com/gtag/js?id=AW-11142193293"
+  ],
+  "note": "The owner explicitly approved restoring existing Google tags. They are enabled only for production builds on homeperfectionnow.com; disabled on previews and localhost. Configuration: content/site.json and app/plugins/tracking.client.ts."
+}

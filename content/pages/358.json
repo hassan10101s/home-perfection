@@ -1,0 +1,344 @@
+{
+  "id": "358",
+  "path": "/من-نحن/",
+  "title": "من نحن",
+  "canonical": "https://homeperfectionnow.com/من-نحن/",
+  "bodyClass": "rtl wp-singular page-template-default page page-id-358 wp-custom-logo wp-embed-responsive wp-theme-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-4.13.2 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header elementor-default elementor-template-full-width elementor-kit-27 elementor-page elementor-page-358",
+  "css": [
+    "/wp-content/litespeed/css/c89078ff0a7a7a0981a6e1a072dbb6f4.css",
+    "/wp-content/litespeed/css/f9fe7d6abdf0b467614fd13d77fb9c9c.css",
+    "/wp-content/litespeed/css/fc949d51bf588e554412344f09e07705.css",
+    "/wp-content/litespeed/css/5fa8018ed12f71dff7729f927d6e2f80.css",
+    "/wp-content/litespeed/css/862d632cc7a34747864ed651c467c10d.css",
+    "/wp-content/litespeed/css/4fb5f7fc5e41f736ec0527b162519d52.css",
+    "/wp-content/litespeed/css/b1e93b45f94409736b88d6ae45cd64f9.css",
+    "/wp-content/litespeed/css/12045858d487a8ae56337b554a5ee03c.css",
+    "/wp-content/litespeed/css/c3be9e612baf8fc4af612de8af4c0864.css",
+    "/wp-content/litespeed/css/904cd5abc33089d174aa58a8433985b6.css",
+    "/wp-content/litespeed/css/1998e2c31b5cbdad5cdfbf08d5e95182.css",
+    "/assets/styles/0356978c0eb0d5a8.css",
+    "/assets/styles/bc74019021fd5d84.css",
+    "/assets/styles/da52335d2bc24486.css",
+    "/assets/styles/7f8f11b89ec2a1a8.css",
+    "/assets/styles/3ecaa5f89260ef9a.css",
+    "/assets/styles/d908d0355a13f879.css"
+  ],
+  "styles": [],
+  "meta": [
+    {
+      "name": "robots",
+      "content": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    },
+    {
+      "name": "description",
+      "content": "شركة البيت المثالي للخدمات المنزلية المتكاملة نحن شركة رائده في نقل العفش والاثاث المنزلي والفندقي ومكافحة الحشرات والتنظيف المنزلي نعمل علي مدار 24 ساعة جميع أيام الاسبوع كما يمكننا ايضا تقديم اسعار تنافسيه جدا ناتجه من خلال خبراتنا لمدة تسع سنوات عملنا خلالها في معظم مدن المملكة"
+    },
+    {
+      "property": "og:locale",
+      "content": "ar_AR"
+    },
+    {
+      "property": "og:type",
+      "content": "article"
+    },
+    {
+      "property": "og:title",
+      "content": "من نحن"
+    },
+    {
+      "property": "og:description",
+      "content": "شركة البيت المثالي للخدمات المنزلية المتكاملة نحن شركة رائده في نقل العفش والاثاث المنزلي والفندقي ومكافحة الحشرات والتنظيف المنزلي نعمل علي مدار 24 ساعة جميع أيام الاسبوع كما يمكننا ايضا تقديم اسعار تنافسيه جدا ناتجه من خلال خبراتنا لمدة تسع سنوات عملنا خلالها في معظم مدن المملكة"
+    },
+    {
+      "property": "og:url",
+      "content": "https://homeperfectionnow.com/من-نحن/"
+    },
+    {
+      "property": "og:site_name",
+      "content": "البيت المثالي للخدمات المتكاملة"
+    },
+    {
+      "property": "article:modified_time",
+      "content": "2026-10-11T15:48:13+00:00"
+    },
+    {
+      "property": "og:image",
+      "content": "https://homeperfectionnow.com/wp-content/uploads/2024/11/cropped-home808.webp"
+    },
+    {
+      "property": "og:image:width",
+      "content": "817"
+    },
+    {
+      "property": "og:image:height",
+      "content": "550"
+    },
+    {
+      "property": "og:image:type",
+      "content": "image/webp"
+    },
+    {
+      "name": "twitter:card",
+      "content": "summary_large_image"
+    },
+    {
+      "name": "twitter:label1",
+      "content": "وقت القراءة المُقدّر"
+    },
+    {
+      "name": "twitter:data1",
+      "content": "دقيقة واحدة"
+    },
+    {
+      "name": "google-adsense-platform-account",
+      "content": "ca-host-pub-2644536267352236"
+    },
+    {
+      "name": "google-adsense-platform-domain",
+      "content": "sitekit.withgoogle.com"
+    },
+    {
+      "name": "msapplication-TileImage",
+      "content": "https://homeperfectionnow.com/wp-content/uploads/2024/11/cropped-HOME-01-270x270.webp"
+    }
+  ],
+  "schema": [
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://homeperfectionnow.com/%d9%85%d9%86-%d9%86%d8%ad%d9%86/",
+          "url": "https://homeperfectionnow.com/%d9%85%d9%86-%d9%86%d8%ad%d9%86/",
+          "name": "من نحن",
+          "isPartOf": {
+            "@id": "https://homeperfectionnow.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://homeperfectionnow.com/%d9%85%d9%86-%d9%86%d8%ad%d9%86/#primaryimage"
+          },
+          "image": {
+            "@id": "https://homeperfectionnow.com/%d9%85%d9%86-%d9%86%d8%ad%d9%86/#primaryimage"
+          },
+          "thumbnailUrl": "https://homeperfectionnow.com/wp-content/uploads/2024/11/cropped-home808-74x50.webp",
+          "datePublished": "2024-12-08T15:00:13+00:00",
+          "dateModified": "2026-10-11T15:48:13+00:00",
+          "description": "شركة البيت المثالي للخدمات المنزلية المتكاملة نحن شركة رائده في نقل العفش والاثاث المنزلي والفندقي ومكافحة الحشرات والتنظيف المنزلي نعمل علي مدار 24 ساعة جميع أيام الاسبوع كما يمكننا ايضا تقديم اسعار تنافسيه جدا ناتجه من خلال خبراتنا لمدة تسع سنوات عملنا خلالها في معظم مدن المملكة",
+          "breadcrumb": {
+            "@id": "https://homeperfectionnow.com/%d9%85%d9%86-%d9%86%d8%ad%d9%86/#breadcrumb"
+          },
+          "inLanguage": "ar",
+          "potentialAction": [
+            {
+              "@type": "ReadAction",
+              "target": [
+                "https://homeperfectionnow.com/%d9%85%d9%86-%d9%86%d8%ad%d9%86/"
+              ]
+            }
+          ]
+        },
+        {
+          "@type": "ImageObject",
+          "inLanguage": "ar",
+          "@id": "https://homeperfectionnow.com/%d9%85%d9%86-%d9%86%d8%ad%d9%86/#primaryimage",
+          "url": "https://homeperfectionnow.com/wp-content/uploads/2024/11/cropped-home808.webp",
+          "contentUrl": "https://homeperfectionnow.com/wp-content/uploads/2024/11/cropped-home808.webp",
+          "width": 817,
+          "height": 550,
+          "caption": "البيت المثالي"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://homeperfectionnow.com/%d9%85%d9%86-%d9%86%d8%ad%d9%86/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://homeperfectionnow.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "من-نحن"
+            }
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://homeperfectionnow.com/#website",
+          "url": "https://homeperfectionnow.com/",
+          "name": "البيت المثالي للخدمات المتكاملة",
+          "description": "خدمات البيت المثالي شركة نقل عفش . نضمن لك الجودة مع ضمان بأفضل الأسعار. اتصل بنا الآن",
+          "publisher": {
+            "@id": "https://homeperfectionnow.com/#organization"
+          },
+          "alternateName": "البيت المثالي",
+          "potentialAction": [
+            {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://homeperfectionnow.com/?s={search_term_string}"
+              },
+              "query-input": {
+                "@type": "PropertyValueSpecification",
+                "valueRequired": true,
+                "valueName": "search_term_string"
+              }
+            }
+          ],
+          "inLanguage": "ar"
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://homeperfectionnow.com/#organization",
+          "name": "البيت المثالي للخدمات المتكاملة",
+          "url": "https://homeperfectionnow.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "inLanguage": "ar",
+            "@id": "https://homeperfectionnow.com/#/schema/logo/image/",
+            "url": "https://homeperfectionnow.com/wp-content/uploads/2024/11/cropped-home808.webp",
+            "contentUrl": "https://homeperfectionnow.com/wp-content/uploads/2024/11/cropped-home808.webp",
+            "width": 817,
+            "height": 550,
+            "caption": "البيت المثالي للخدمات المتكاملة"
+          },
+          "image": {
+            "@id": "https://homeperfectionnow.com/#/schema/logo/image/"
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MovingCompany",
+          "name": "البيت المثالي لنقل العفش بالرياض وبريدة",
+          "alternateName": "Home Perfection Moving",
+          "image": "https://homeperfectionnow.com/wp-content/uploads/2023/05/room-interior-design-300x200.webp",
+          "@id": "https://homeperfectionnow.com/#organization",
+          "url": "https://homeperfectionnow.com/",
+          "telephone": "+966565964755",
+          "description": "البيت المثالي هي الخيار الأول لنقل العفش في الرياض، بريدة، والقصيم. نقدم خدمات نقل أثاث شاملة مع الفك والتركيب، التغليف الاحترافي، وتوفير كراتين ومواد تغليف. نضمن سلامة منقولاتكم بأسعار تنافسية تبدأ من 190 ريال.",
+          "priceRange": "SAR 190 - SAR 1500",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "حي الشفا",
+            "addressLocality": "Riyadh",
+            "addressRegion": "Riyadh Region",
+            "postalCode": "14713",
+            "addressCountry": "SA"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 24.7136,
+            "longitude": 46.6753
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens": "08:00",
+            "closes": "23:00"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Riyadh"
+            },
+            {
+              "@type": "City",
+              "name": "Buraydah"
+            },
+            {
+              "@type": "AdministrativeArea",
+              "name": "Al Qassim"
+            }
+          ],
+          "makesOffer": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "نقل عفش مع الفك والتركيب",
+                "description": "خدمة فك غرف النوم والمطابخ والمكيفات وإعادة تركيبها بأيدي فنيين محترفين."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "تغليف الأثاث",
+                "description": "استخدام مواد تغليف عالية الجودة (نايلون، فقاعات، كراتين) لحماية العفش من الخدوش."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "دينا نقل عفش مغلقة",
+                "description": "سيارات نقل مجهزة ومغلقة لحماية الأثاث أثناء النقل داخل وخارج الرياض."
+              }
+            }
+          ],
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "127",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "ما هي أفضل شركة نقل عفش بالرياض وبريدة؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "تعتبر شركة البيت المثالي الأفضل بفضل خبرتها الطويلة، وتوفير عمالة مدربة، وضمان شامل على المنقولات، وتغطية شاملة لمناطق الرياض والقصيم وبريدة."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "كم سعر نقل العفش في الرياض؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "نقدم أسعاراً تنافسية تبدأ من 190 ريال للمشاوير البسيطة، ويتم تحديد السعر النهائي بناءً على حجم العفش وعدد الغرف والمسافة، مع تقديم عاينة مجانية."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "هل تقدمون ضمان على نقل الأثاث؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "نعم، نقدم في البيت المثالي ضماناً شاملاً ضد الخدش أو الكسر أثناء عملية النقل والفك والتركيب لضمان راحة العميل."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "هل توفرون ونش رفع أثاث؟",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "نعم، لدينا أوناش رفع هيدروليكية حديثة لتنزيل ورفع الأثاث للأدوار العليا بأمان تام دون تعريضه للاحتكاك بالسلالم."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "isQuote": false,
+  "modified": "2026-10-11T15:48:13"
+}

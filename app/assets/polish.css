@@ -1,0 +1,43 @@
+/* A light visual refresh; original page content and layout stay intact. */
+:root{--hp-navy:#233e70;--hp-green:#176d46;--hp-orange:#ed994e;--hp-border:#e4e9ef;--hp-ink:#263750}
+.hp-migrated{color:var(--hp-ink);text-rendering:optimizeLegibility}
+.hp-migrated .hp-desktop-header{background:#fff;border-bottom:1px solid var(--hp-border);padding:14px clamp(24px,4vw,64px);min-height:84px;box-shadow:0 2px 14px #233e7005}
+.hp-migrated .hp-desktop-links{gap:30px}
+.hp-migrated .hp-desktop-links>a,.hp-migrated .hp-services summary{font-size:17px;color:var(--hp-navy);font-weight:600}
+.hp-migrated .hp-desktop-links>a:last-child{padding:10px 18px;border-radius:10px;background:var(--hp-navy);color:#fff}
+.hp-migrated .hp-services>div{border:1px solid var(--hp-border);border-radius:12px;margin-top:14px;box-shadow:0 12px 32px #233e7014}
+.hp-migrated .hp-services a{border-radius:7px;font-size:16px}
+.hp-migrated .hp-services a:hover{background:#f1f5fa;color:var(--hp-navy)}
+.hp-migrated #page .elementor .elementor-button{background:var(--hp-navy);color:white;border-radius:10px;padding:13px 22px;font-weight:700;box-shadow:0 4px 12px #233e7012;transition:background .18s,transform .18s}
+.hp-migrated #page .elementor a[href^="tel:"] .elementor-button,.hp-migrated #page .elementor a.elementor-button[href^="tel:"]{background:var(--hp-green);color:white}
+.hp-migrated #page .elementor .elementor-button:hover{background:#182f58;transform:translateY(-1px)}
+.hp-migrated #page .elementor h1{color:var(--hp-navy);line-height:1.65;font-weight:800}
+.hp-migrated #page .elementor h2{color:var(--hp-navy);line-height:1.7}
+.hp-migrated #page .elementor h3{line-height:1.95}
+.hp-migrated #page .elementor p{line-height:1.95}
+.hp-migrated #page .elementor-widget-image img{border-radius:14px}
+.hp-migrated #page .elementor-widget-image:first-child img{border-radius:0}
+.hp-migrated #page .e-n-accordion-item{border:1px solid var(--hp-border);border-radius:12px;margin-bottom:10px;overflow:hidden;background:white}
+.hp-migrated #page .e-n-accordion-item>summary{padding:17px 20px;color:var(--hp-navy);background:#f7f9fc}
+.hp-migrated #page .e-n-accordion-item[open]>summary{background:#edf3fa}
+.hp-migrated .hp-footer{background:#f6f8fb;border-top:1px solid var(--hp-border);color:#526077;font-size:14px;padding:28px 20px}
+.hp-migrated .hp-footer a{color:var(--hp-navy)}
+.hp-migrated .hp-call{box-shadow:0 6px 22px #176d4626;padding:12px 20px}
+.hp-migrated .hp-quote{border:1px solid var(--hp-border);box-shadow:0 12px 40px #233e7009;border-radius:18px;padding:32px}
+.hp-migrated .hp-quote h2{color:var(--hp-navy)}
+.hp-migrated .hp-quote input:not([type=checkbox]),.hp-migrated .hp-quote select,.hp-migrated .hp-quote textarea{border-color:#cad4e0;border-radius:9px}
+.hp-migrated .hp-mobile-navigation{border-color:var(--hp-border);padding:14px 20px}
+.hp-migrated .hp-mobile-navigation button{border-radius:9px;background:var(--hp-navy)}
+@media(max-width:600px){.hp-migrated #page .elementor h1{font-size:clamp(23px,6vw,30px);line-height:1.65}.hp-migrated .hp-quote{padding:20px}.hp-migrated .hp-footer{padding-bottom:82px}.hp-migrated .hp-call{font-size:13px;padding:10px 16px}}
+.hp-desktop-links>a[aria-current=page]{text-decoration:underline;text-underline-offset:8px;text-decoration-color:var(--hp-orange);text-decoration-thickness:2px}
+@media(max-width:921px){
+  body.hp-migrated{overflow-x:clip;overflow-y:visible}
+  .hp-migrated .hp-mobile-navigation{position:sticky;top:0;z-index:1000;min-height:79px;box-sizing:border-box;background:#fff;transition:box-shadow .18s ease}
+  .hp-migrated .hp-mobile-navigation.is-scrolled,.hp-migrated .hp-mobile-navigation.is-open{box-shadow:0 5px 20px #233e7017}
+  .hp-migrated .hp-mobile-navigation button{min-height:44px;min-width:108px}
+  .hp-migrated .hp-mobile-navigation nav{max-height:calc(100dvh - 80px);overflow-y:auto;overscroll-behavior:contain;border-bottom:1px solid var(--hp-border);border-radius:0 0 16px 16px;padding:12px 16px 18px}
+  .hp-migrated .hp-mobile-navigation nav a{min-height:44px;box-sizing:border-box;padding:11px 14px;border-radius:8px;font-size:16px;line-height:1.5}
+  .hp-migrated .hp-mobile-navigation nav a:hover,.hp-migrated .hp-mobile-navigation nav a[aria-current=page]{background:#edf3fa;color:var(--hp-navy);font-weight:700}
+  .hp-migrated .hp-mobile-navigation nav a:focus-visible{outline-offset:-3px}
+  .hp-migrated #main-content{scroll-margin-top:90px}
+}

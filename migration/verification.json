@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-25T05:34:54.707Z",
+  "environment": "production",
+  "pages": 13,
+  "assetReferences": 374,
+  "cssReferences": 7,
+  "internalLinks": 209,
+  "errors": [],
+  "sourceBrokenLinks": [
+    {
+      "url": "https://homeperfectionnow.com/%D9%86%D9%82%D9%84-%D8%B9%D9%81%D8%B4-%D8%A7%D9%84%D8%B1%D8%B3/",
+      "error": "Error: HTTP 404"
+    },
+    {
+      "url": "https://homeperfectionnow.com/company-services/",
+      "error": "Error: HTTP 404"
+    }
+  ],
+  "notes": [
+    "Tracking is restricted to the production build on homeperfectionnow.com.",
+    "Source Elementor content is retained as separate HTML files; the app shell and quote form are Vue components."
+  ]
+}

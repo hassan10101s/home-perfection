@@ -1,0 +1,19 @@
+{
+  "name": "home-perfection",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev --host 127.0.0.1",
+    "generate": "node scripts/build.mjs",
+    "generate:production": "node scripts/build.mjs --production",
+    "preview": "node scripts/serve.mjs",
+    "migrate": "node scripts/migrate.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "devDependencies": {
+    "nuxt": "4.6.2",
+    "cheerio": "^1.0.0"
+  },
+  "engines": { "node": "^22.22.3 || ^24.15.0 || >=26.0.0" }
+}

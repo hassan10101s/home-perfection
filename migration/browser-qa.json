@@ -1,0 +1,6 @@
+{
+  "desktop": { "viewport": 1280, "documentWidth": 1265, "brokenImages": 0, "externalScriptsInLocalPreview": 0, "externalStyles": 0, "consoleErrorsOrWarnings": 0 },
+  "mobile": { "viewport": 390, "documentWidth": 375, "brokenImages": 0, "menuOpens": true, "stickyHeaderTopAfterScroll": 0, "testedScrollY": 738.4, "headerHeight": 79, "escapeClosesMenu": true, "outsideClickClosesMenu": true },
+  "interactions": { "faqOpens": true, "invalidPhoneRejected": true, "whatsappMessageSent": false },
+  "limitations": ["Google tag delivery requires testing on the production domain; tracking is intentionally disabled on localhost.", "Cloudflare platform configuration and search ranking changes cannot be tested before deployment.", "No Lighthouse score is claimed."]
+}
