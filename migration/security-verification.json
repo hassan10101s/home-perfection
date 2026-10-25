@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-25T05:41:10.569Z",
+  "scannedTextFiles": 114,
+  "publicPages": 13,
+  "knownSecretPatternsFound": 0,
+  "legacyScripts": 0,
+  "inlineEventHandlers": 0,
+  "securityHeaders": true,
+  "whatsappSafeExternalLink": true,
+  "errors": [],
+  "limitations": [
+    "This is a static review and configuration check, not a penetration test or a guarantee of complete security.",
+    "Build-tool dependency warning involving node-forge remains documented in README; build tools are not deployed.",
+    "Cloudflare account, DNS, TLS configuration and private Google Tag Manager container need review at deployment."
+  ]
+}

@@ -3,5 +3,6 @@
   "mobile": { "viewport": 390, "documentWidth": 375, "brokenImages": 0, "menuOpens": true, "stickyHeaderTopAfterScroll": 0, "testedScrollY": 738.4, "headerHeight": 79, "escapeClosesMenu": true, "outsideClickClosesMenu": true },
   "interactions": { "faqOpens": true, "invalidPhoneRejected": true, "whatsappMessageSent": false },
   "floatingCallButton": { "width": 58, "height": 58, "round": true, "localSvg": true, "href": "tel:0565964755", "accessibleLabel": true },
+  "floatingWhatsAppButton": { "width": 58, "height": 58, "aboveCall": true, "gap": 12, "localSvg": true, "href": "https://wa.me/966565964755", "rel": "noopener noreferrer" },
   "limitations": ["Google tag delivery requires testing on the production domain; tracking is intentionally disabled on localhost.", "Cloudflare platform configuration and search ranking changes cannot be tested before deployment.", "No Lighthouse score is claimed."]
 }

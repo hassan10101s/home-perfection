@@ -47,3 +47,6 @@
   .hp-migrated .hp-call-icon{width:25px;height:25px}
   .hp-migrated .hp-call-label{display:none}
 }
+.hp-migrated .hp-call:not(.hp-whatsapp){background:var(--hp-navy)}
+.hp-migrated .hp-whatsapp{bottom:84px;background:#17834a}
+@media(max-width:921px){.hp-migrated .hp-whatsapp{bottom:calc(88px + env(safe-area-inset-bottom,0px))}}
