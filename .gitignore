@@ -6,3 +6,5 @@ node_modules/
 migration/raw/
 *.log
 release/
+.wrangler/
+dist/

@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-25T07:28:12.859Z",
+  "worker": "home-perfection",
+  "wranglerVersion": "4.152.0",
+  "mode": "static-assets-only",
+  "assetsDirectory": ".output/public",
+  "assetsRead": 185,
+  "dryRunExitCode": 0,
+  "ambientNitroPreset": "cloudflare-module",
+  "actualBuildPreset": "static",
+  "redirectedServerConfigGenerated": false,
+  "serverEntryRequired": false,
+  "npmCiDryRunExitCode": 0,
+  "miniflareUndiciVersion": "7.30.1",
+  "liveDeployPerformed": false
+}

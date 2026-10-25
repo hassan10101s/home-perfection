@@ -52,6 +52,20 @@ npm run verify
 
 ارفع **محتويات** `.output/public` إلى Cloudflare Pages، بما فيها `_headers` و`_redirects` و`404.html`. أو اضبط أمر البناء على `npm run generate:production` ومجلد الإخراج `.output/public` واستخدم Node 24.22.1.
 
+### Cloudflare Workers المستخدم حاليًا
+
+ملف `wrangler.jsonc` يعرّف Worker باسم `home-perfection` للأصول الثابتة فقط، ومجلد النشر `.output/public`، مع 404 حقيقية وروابط تنتهي بالشرطة المائلة تلقائيًا. لا توجد نقطة دخول JavaScript أو `main` لأن الموقع لا يحتاج سيرفر Nuxt.
+
+أمر Deploy في Cloudflare: `npx wrangler deploy` أو `npm run deploy`. إعداد `build.command` داخل Wrangler يشغّل `npm run build` قبل النشر؛ يمكن ترك Build command المنفصل في اللوحة فارغًا لتجنب بناء الموقع مرتين. Node 24.22.1 وProduction branch `main`.
+
+تم تثبيت نسخة Wrangler في حزم التطوير، وتثبيت Nitro preset على `static` في إعداد Nuxt وبيئة أمر البناء، لمنع اكتشاف المشروع تلقائيًا كمشروع SSR وإنشاء إعداد يبحث عن `.output/server/index.mjs`.
+
+لاختبار تجهيز النشر دون رفعه:
+
+```sh
+npx wrangler deploy --dry-run --outdir .data/wrangler-dry-run
+```
+
 للرفع على عنوان تجريبي عام استخدم `npm run generate:preview` فقط، أو احمِ المعاينة بواسطة Cloudflare Access. لا ترفع بناء إنتاج قابلًا للفهرسة على عنوان تجريبي عام قبل إعداد الحماية.
 
 تعمل خطوة توليد `_headers` و`robots.txt` من hook داخل Nuxt أيضًا، حتى عند استعمال `nuxt generate` مباشرة. يرفض التغليف أي اختلاف بين وضع البناء وتعليمات الفهرسة في الصفحة الرئيسية. اختبار الفهرسة داخل `verify` يقارن تعليمات كل صفحة بأصلها، بدل فتح صفحات كان حظرها مقصودًا.

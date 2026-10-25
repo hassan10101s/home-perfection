@@ -4,7 +4,7 @@ import { finalizeStaticSite } from './finalize.mjs';
 const production = !process.argv.includes('--preview');
 if (!process.argv.includes('--finalize-only')) {
   const result = spawnSync(process.execPath, ['node_modules/nuxt/bin/nuxt.mjs', 'generate'], {
-    stdio: 'inherit', env: { ...process.env, SITE_ENV: production ? 'production' : 'preview', NUXT_TELEMETRY_DISABLED: '1' },
+    stdio: 'inherit', env: { ...process.env, SITE_ENV: production ? 'production' : 'preview', NITRO_PRESET: 'static', NUXT_TELEMETRY_DISABLED: '1' },
   });
   if (result.status !== 0) process.exit(result.status || 1);
 }

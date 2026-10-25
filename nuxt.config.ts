@@ -17,6 +17,6 @@ export default defineNuxtConfig({
       })
     },
   },
-  nitro: { prerender: { routes: manifest.map(p => p.path), crawlLinks: false, failOnError: true } },
+  nitro: { preset: 'static', prerender: { routes: manifest.map(p => p.path), crawlLinks: false, failOnError: true } },
   experimental: { payloadExtraction: true },
 })
