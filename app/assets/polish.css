@@ -14,6 +14,10 @@
 .hp-migrated #page .elementor h1{color:var(--hp-navy);line-height:1.65;font-weight:800}
 .hp-migrated #page .elementor h2{color:var(--hp-navy);line-height:1.7}
 .hp-migrated #page .elementor h3{line-height:1.95}
+.hp-quote-intro{max-width:900px;margin:32px auto 0;padding:0 24px;box-sizing:border-box;color:var(--hp-ink)}
+.hp-migrated .hp-quote-intro h2{margin:0 0 18px;text-align:center;font-size:clamp(26px,4vw,36px);line-height:1.5;color:var(--hp-navy)}
+.hp-migrated .hp-quote-intro p{margin:0;font-size:18px;font-weight:500;line-height:1.9;color:var(--hp-ink)}
+.hp-migrated #page .nav-links a{color:#526077}
 .hp-migrated #page .elementor p{line-height:1.95}
 .hp-migrated #page .elementor-widget-image img{border-radius:14px}
 .hp-migrated #page .elementor-widget-image:first-child img{border-radius:0}
@@ -27,7 +31,7 @@
 .hp-migrated .hp-call-icon{flex:none}
 .hp-migrated .hp-call:hover{transform:translateY(-2px);box-shadow:0 8px 26px #176d4638}
 .hp-migrated .hp-quote{border:1px solid var(--hp-border);box-shadow:0 12px 40px #233e7009;border-radius:18px;padding:32px}
-.hp-migrated .hp-quote h2{color:var(--hp-navy)}
+.hp-migrated .hp-quote h2{color:var(--hp-navy);font-size:clamp(24px,3vw,32px);line-height:1.5;margin:0 0 14px}
 .hp-migrated .hp-quote input:not([type=checkbox]),.hp-migrated .hp-quote select,.hp-migrated .hp-quote textarea{border-color:#cad4e0;border-radius:9px}
 .hp-migrated .hp-mobile-navigation{border-color:var(--hp-border);padding:14px 20px}
 .hp-migrated .hp-mobile-navigation button{border-radius:9px;background:var(--hp-navy)}

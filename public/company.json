@@ -1,0 +1,56 @@
+{
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "@id": "https://homeperfectionnow.com/#organization",
+  "name": "البيت المثالي للخدمات المتكاملة",
+  "alternateName": [
+    "البيت المثالي",
+    "Home Perfection"
+  ],
+  "url": "https://homeperfectionnow.com/",
+  "telephone": "+966565964755",
+  "email": "info@homeperfectionnow.com",
+  "description": "خدمات نقل الأثاث والفك والتركيب والتغليف في القصيم وبريدة والرياض.",
+  "logo": "https://homeperfectionnow.com/wp-content/uploads/2024/11/cropped-home808.webp",
+  "areaServed": [
+    {
+      "@type": "Place",
+      "name": "القصيم"
+    },
+    {
+      "@type": "Place",
+      "name": "بريدة"
+    },
+    {
+      "@type": "Place",
+      "name": "الرياض"
+    }
+  ],
+  "subjectOf": [
+    {
+      "@type": "WebPage",
+      "name": "الرئيسية والخدمات",
+      "url": "https://homeperfectionnow.com/"
+    },
+    {
+      "@type": "WebPage",
+      "name": "من نحن",
+      "url": "https://homeperfectionnow.com/من-نحن/"
+    },
+    {
+      "@type": "WebPage",
+      "name": "التواصل",
+      "url": "https://homeperfectionnow.com/connect/"
+    },
+    {
+      "@type": "WebPage",
+      "name": "نقل عفش بالرياض",
+      "url": "https://homeperfectionnow.com/moving-furniture-riyadh/"
+    },
+    {
+      "@type": "WebPage",
+      "name": "نقل عفش ببريدة",
+      "url": "https://homeperfectionnow.com/نقل-عفش-بريدة/"
+    }
+  ]
+}

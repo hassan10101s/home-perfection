@@ -1,0 +1,279 @@
+{
+  "date": "2026-10-25T08:09:05.810Z",
+  "beforeBytes": 1888114,
+  "afterBytes": 1807240,
+  "files": {
+    "/wp-content/uploads/2026/01/3PHOTO-V1-1-1024x393.webp": {
+      "beforeBytes": 117272,
+      "afterBytes": 110190,
+      "beforeHash": "31b3565799c4dfa8",
+      "afterHash": "4eef2c5c08151a39",
+      "width": 1024,
+      "height": 393
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V1-1-300x115.webp": {
+      "beforeBytes": 21566,
+      "afterBytes": 19792,
+      "beforeHash": "e735ae275a32bbfd",
+      "afterHash": "52023e1f4fba9106",
+      "width": 300,
+      "height": 115
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V1-1-768x295.webp": {
+      "beforeBytes": 79416,
+      "afterBytes": 74078,
+      "beforeHash": "3ace5ae60741c2e4",
+      "afterHash": "566dac59095179ee",
+      "width": 768,
+      "height": 295
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V1-1.webp": {
+      "beforeBytes": 122338,
+      "afterBytes": 122338,
+      "beforeHash": "2572207b2f6a2045",
+      "afterHash": "2572207b2f6a2045",
+      "width": 1200,
+      "height": 461
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V2-1-1024x393.webp": {
+      "beforeBytes": 135564,
+      "afterBytes": 125274,
+      "beforeHash": "9d37d828a78a28cb",
+      "afterHash": "b62a88132af0ab9f",
+      "width": 1024,
+      "height": 393
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V2-1-300x115.webp": {
+      "beforeBytes": 24296,
+      "afterBytes": 22480,
+      "beforeHash": "4020dcd73be9ec8d",
+      "afterHash": "4017013e11142cb8",
+      "width": 300,
+      "height": 115
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V2-1-768x295.webp": {
+      "beforeBytes": 91244,
+      "afterBytes": 84702,
+      "beforeHash": "3f07aa5d6dca4158",
+      "afterHash": "4a59dc1b3adf39bb",
+      "width": 768,
+      "height": 295
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V2-1.webp": {
+      "beforeBytes": 136712,
+      "afterBytes": 136712,
+      "beforeHash": "a997b2cad06c7589",
+      "afterHash": "a997b2cad06c7589",
+      "width": 1200,
+      "height": 461
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V3-1-1024x393.webp": {
+      "beforeBytes": 89688,
+      "afterBytes": 82534,
+      "beforeHash": "c92c1ff82a9e9370",
+      "afterHash": "de9f5447b4118145",
+      "width": 1024,
+      "height": 393
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V3-1-300x115.webp": {
+      "beforeBytes": 17414,
+      "afterBytes": 15522,
+      "beforeHash": "550641a1935e869e",
+      "afterHash": "fab44dfab17ff099",
+      "width": 300,
+      "height": 115
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V3-1-768x295.webp": {
+      "beforeBytes": 61472,
+      "afterBytes": 56894,
+      "beforeHash": "790eceeca43d28e5",
+      "afterHash": "cd15d28464411b07",
+      "width": 768,
+      "height": 295
+    },
+    "/wp-content/uploads/2026/01/3PHOTO-V3-1.webp": {
+      "beforeBytes": 86340,
+      "afterBytes": 86340,
+      "beforeHash": "1414b26072d517d5",
+      "afterHash": "1414b26072d517d5",
+      "width": 1200,
+      "height": 461
+    },
+    "/wp-content/uploads/2026/01/HOME-04.webp": {
+      "beforeBytes": 37888,
+      "afterBytes": 37888,
+      "beforeHash": "71bd7f9471f9b74f",
+      "afterHash": "71bd7f9471f9b74f",
+      "width": 800,
+      "height": 835
+    },
+    "/wp-content/uploads/2026/01/HOME-perfection2-1024x483.webp": {
+      "beforeBytes": 59134,
+      "afterBytes": 59134,
+      "beforeHash": "e12aed7569a9ee0a",
+      "afterHash": "e12aed7569a9ee0a",
+      "width": 1024,
+      "height": 483
+    },
+    "/wp-content/uploads/2026/01/HOME-perfection2-300x142.webp": {
+      "beforeBytes": 12836,
+      "afterBytes": 12836,
+      "beforeHash": "5f910e82b7f1c9b3",
+      "afterHash": "5f910e82b7f1c9b3",
+      "width": 300,
+      "height": 142
+    },
+    "/wp-content/uploads/2026/01/HOME-perfection2-768x362.webp": {
+      "beforeBytes": 40980,
+      "afterBytes": 40980,
+      "beforeHash": "5844f5b61f7a3f5c",
+      "afterHash": "5844f5b61f7a3f5c",
+      "width": 768,
+      "height": 362
+    },
+    "/wp-content/uploads/2026/01/HOME-perfection2.webp": {
+      "beforeBytes": 81456,
+      "afterBytes": 81456,
+      "beforeHash": "cbf7c634e136c497",
+      "afterHash": "cbf7c634e136c497",
+      "width": 1500,
+      "height": 708
+    },
+    "/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-11-at-9.19.44-PM-300x225.webp": {
+      "beforeBytes": 9848,
+      "afterBytes": 9094,
+      "beforeHash": "ee7a81a73d86d7a2",
+      "afterHash": "8a764fff5b2c1522",
+      "width": 300,
+      "height": 225
+    },
+    "/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-11-at-9.19.44-PM-600x450.webp": {
+      "beforeBytes": 27540,
+      "afterBytes": 25488,
+      "beforeHash": "210a5960fad5892e",
+      "afterHash": "2a14a380c6d63581",
+      "width": 600,
+      "height": 450
+    },
+    "/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-11-at-9.19.44-PM-768x576.webp": {
+      "beforeBytes": 38280,
+      "afterBytes": 34438,
+      "beforeHash": "2b66e974ca64eec4",
+      "afterHash": "412b7ded0dab6735",
+      "width": 768,
+      "height": 576
+    },
+    "/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-11-at-9.19.44-PM.webp": {
+      "beforeBytes": 29422,
+      "afterBytes": 29422,
+      "beforeHash": "8859d3410d40273c",
+      "afterHash": "8859d3410d40273c",
+      "width": 800,
+      "height": 600
+    },
+    "/wp-content/uploads/2026/01/تغليف-العفش--300x224.webp": {
+      "beforeBytes": 11676,
+      "afterBytes": 10764,
+      "beforeHash": "e8a5b2fb5f38a397",
+      "afterHash": "892315e5dfee137d",
+      "width": 300,
+      "height": 224
+    },
+    "/wp-content/uploads/2026/01/تغليف-العفش--768x572.webp": {
+      "beforeBytes": 39474,
+      "afterBytes": 35308,
+      "beforeHash": "6b0567d4095b99ff",
+      "afterHash": "db2ed2acde5a076b",
+      "width": 768,
+      "height": 572
+    },
+    "/wp-content/uploads/2026/01/تغليف-العفش-.webp": {
+      "beforeBytes": 33254,
+      "afterBytes": 33254,
+      "beforeHash": "13eb200489c9dfaf",
+      "afterHash": "13eb200489c9dfaf",
+      "width": 800,
+      "height": 596
+    },
+    "/wp-content/uploads/2026/01/تغليف-نيلون-768x1024.webp": {
+      "beforeBytes": 76536,
+      "afterBytes": 69640,
+      "beforeHash": "d9e4b99b13965491",
+      "afterHash": "4ac3da51d9fbe535",
+      "width": 768,
+      "height": 1024
+    },
+    "/wp-content/uploads/2026/01/تغليف-نيلون.webp": {
+      "beforeBytes": 58216,
+      "afterBytes": 58216,
+      "beforeHash": "063bf54cf6cc3544",
+      "afterHash": "063bf54cf6cc3544",
+      "width": 800,
+      "height": 1067
+    },
+    "/wp-content/uploads/2026/01/عمالنا-اثنا-نقل-مقتنيات-قصر-الامير-بندر-بن-عبد-العزيز-1024x768.webp": {
+      "beforeBytes": 77738,
+      "afterBytes": 70666,
+      "beforeHash": "c820442e9d2348d7",
+      "afterHash": "c552c0f9621e313e",
+      "width": 1024,
+      "height": 768
+    },
+    "/wp-content/uploads/2026/01/عمالنا-اثنا-نقل-مقتنيات-قصر-الامير-بندر-بن-عبد-العزيز-300x225.webp": {
+      "beforeBytes": 11252,
+      "afterBytes": 10548,
+      "beforeHash": "250330796b8dd0dd",
+      "afterHash": "6a9084c97b4f380a",
+      "width": 300,
+      "height": 225
+    },
+    "/wp-content/uploads/2026/01/عمالنا-اثنا-نقل-مقتنيات-قصر-الامير-بندر-بن-عبد-العزيز-768x576.webp": {
+      "beforeBytes": 52102,
+      "afterBytes": 48010,
+      "beforeHash": "9a2bd0534c1f53bb",
+      "afterHash": "1afce7291ccc9716",
+      "width": 768,
+      "height": 576
+    },
+    "/wp-content/uploads/2026/01/عمالنا-اثنا-نقل-مقتنيات-قصر-الامير-بندر-بن-عبد-العزيز.webp": {
+      "beforeBytes": 108818,
+      "afterBytes": 108818,
+      "beforeHash": "2560774db23ed09a",
+      "afterHash": "2560774db23ed09a",
+      "width": 1280,
+      "height": 960
+    },
+    "/wp-content/uploads/2026/01/فك-وتركيب.webp": {
+      "beforeBytes": 11666,
+      "afterBytes": 11666,
+      "beforeHash": "0f8076894267fe45",
+      "afterHash": "0f8076894267fe45",
+      "width": 480,
+      "height": 360
+    },
+    "/wp-content/uploads/2026/01/نقل-عفش-بحي-الشفا-300x227.webp": {
+      "beforeBytes": 10928,
+      "afterBytes": 10222,
+      "beforeHash": "f897e474dce23372",
+      "afterHash": "a87daaf7f928ef2c",
+      "width": 300,
+      "height": 227
+    },
+    "/wp-content/uploads/2026/01/نقل-عفش-بحي-الشفا-768x580.webp": {
+      "beforeBytes": 36624,
+      "afterBytes": 33412,
+      "beforeHash": "f228ef73c2a58022",
+      "afterHash": "6765548f56d9bd3b",
+      "width": 768,
+      "height": 580
+    },
+    "/wp-content/uploads/2026/01/نقل-عفش-بحي-الشفا.webp": {
+      "beforeBytes": 39124,
+      "afterBytes": 39124,
+      "beforeHash": "6b6c2b0e054cc6f2",
+      "afterHash": "6b6c2b0e054cc6f2",
+      "width": 810,
+      "height": 612
+    }
+  }
+}

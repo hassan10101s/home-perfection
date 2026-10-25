@@ -1,0 +1,170 @@
+{
+  "date": "2026-10-25T12:04:06.956Z",
+  "method": "Read computed text colors and composed solid ancestor backgrounds; WCAG AA thresholds 4.5 normal / 3 large. Gradient/image backgrounds require separate visual review.",
+  "desktop": [
+    {
+      "path": "/",
+      "checked": 67,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/moving-furniture-riyadh/",
+      "checked": 30,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/دينا-نقل-عفش-بالرياض/",
+      "checked": 77,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/حساب-تكلفة-النقل/",
+      "checked": 25,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/offers/",
+      "checked": 8,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/من-نحن/",
+      "checked": 18,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/connect/",
+      "checked": 9,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/privacy-policy/",
+      "checked": 29,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/نقل-الأثاث-من-القصيم-إلى-الرياض/",
+      "checked": 27,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/شركة-نقل-عفش-بالقصيم/",
+      "checked": 36,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/نقل-عفش-غرب-الرياض/",
+      "checked": 27,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/نقل-عفش-شمال-الرياض/",
+      "checked": 31,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/نقل-عفش-بريدة/",
+      "checked": 55,
+      "failures": [],
+      "overflow": false
+    }
+  ],
+  "mobile": [
+    {
+      "path": "/",
+      "checked": 67,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/moving-furniture-riyadh/",
+      "checked": 30,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/دينا-نقل-عفش-بالرياض/",
+      "checked": 77,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/حساب-تكلفة-النقل/",
+      "checked": 25,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/offers/",
+      "checked": 8,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/من-نحن/",
+      "checked": 18,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/connect/",
+      "checked": 9,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/privacy-policy/",
+      "checked": 29,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/نقل-الأثاث-من-القصيم-إلى-الرياض/",
+      "checked": 27,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/شركة-نقل-عفش-بالقصيم/",
+      "checked": 36,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/نقل-عفش-غرب-الرياض/",
+      "checked": 27,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/نقل-عفش-شمال-الرياض/",
+      "checked": 31,
+      "failures": [],
+      "overflow": false
+    },
+    {
+      "path": "/نقل-عفش-بريدة/",
+      "checked": 55,
+      "failures": [],
+      "overflow": false
+    }
+  ],
+  "backgroundGateRemoved": true,
+  "rootDecorativeBackgroundsVerified": true,
+  "quoteEmptyColumnsRemoved": true,
+  "limitations": [
+    "Not a full accessibility or pixel-by-pixel audit. Image and gradient backgrounds excluded from automatic ratio calculations."
+  ]
+}

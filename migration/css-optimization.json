@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-25T12:11:14.730Z",
+  "pages": [
+    {
+      "path": "/moving-furniture-riyadh/",
+      "beforeRequests": 19,
+      "afterRequests": 1,
+      "beforeBytes": 252580,
+      "afterBytes": 34164
+    },
+    {
+      "path": "/دينا-نقل-عفش-بالرياض/",
+      "beforeRequests": 19,
+      "afterRequests": 1,
+      "beforeBytes": 250402,
+      "afterBytes": 32541
+    },
+    {
+      "path": "/حساب-تكلفة-النقل/",
+      "beforeRequests": 15,
+      "afterRequests": 1,
+      "beforeBytes": 225492,
+      "afterBytes": 16490
+    },
+    {
+      "path": "/offers/",
+      "beforeRequests": 16,
+      "afterRequests": 1,
+      "beforeBytes": 228891,
+      "afterBytes": 27256
+    },
+    {
+      "path": "/من-نحن/",
+      "beforeRequests": 17,
+      "afterRequests": 1,
+      "beforeBytes": 232956,
+      "afterBytes": 28511
+    },
+    {
+      "path": "/connect/",
+      "beforeRequests": 16,
+      "afterRequests": 1,
+      "beforeBytes": 232357,
+      "afterBytes": 27853
+    },
+    {
+      "path": "/",
+      "beforeRequests": 18,
+      "afterRequests": 1,
+      "beforeBytes": 256956,
+      "afterBytes": 43605
+    },
+    {
+      "path": "/privacy-policy/",
+      "beforeRequests": 12,
+      "afterRequests": 1,
+      "beforeBytes": 298108,
+      "afterBytes": 20106
+    },
+    {
+      "path": "/نقل-الأثاث-من-القصيم-إلى-الرياض/",
+      "beforeRequests": 13,
+      "afterRequests": 1,
+      "beforeBytes": 312422,
+      "afterBytes": 31159
+    },
+    {
+      "path": "/شركة-نقل-عفش-بالقصيم/",
+      "beforeRequests": 15,
+      "afterRequests": 1,
+      "beforeBytes": 327931,
+      "afterBytes": 32536
+    },
+    {
+      "path": "/نقل-عفش-غرب-الرياض/",
+      "beforeRequests": 13,
+      "afterRequests": 1,
+      "beforeBytes": 312369,
+      "afterBytes": 31645
+    },
+    {
+      "path": "/نقل-عفش-شمال-الرياض/",
+      "beforeRequests": 13,
+      "afterRequests": 1,
+      "beforeBytes": 312317,
+      "afterBytes": 31740
+    },
+    {
+      "path": "/نقل-عفش-بريدة/",
+      "beforeRequests": 13,
+      "afterRequests": 1,
+      "beforeBytes": 313281,
+      "afterBytes": 32129
+    }
+  ]
+}

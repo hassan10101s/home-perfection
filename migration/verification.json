@@ -1,9 +1,9 @@
 {
-  "date": "2026-10-25T07:27:26.103Z",
+  "date": "2026-10-25T12:13:26.952Z",
   "environment": "production",
   "pages": 13,
-  "assetReferences": 400,
-  "cssReferences": 7,
+  "assetReferences": 250,
+  "cssReferences": 35,
   "internalLinks": 209,
   "errors": [],
   "sourceBrokenLinks": [

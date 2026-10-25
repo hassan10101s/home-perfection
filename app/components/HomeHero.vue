@@ -17,7 +17,7 @@ import hero from '../../content/home-hero.json'
           <li>الفك والتركيب</li><li>التغليف</li><li>النقل</li>
         </ul>
       </div>
-      <div class="hp-hero-art"><img :src="hero.image.src" :srcset="hero.image.srcset" sizes="(max-width: 720px) 90vw, 560px" :width="hero.image.width" :height="hero.image.height" :alt="hero.image.alt" fetchpriority="high" decoding="async"></div>
+      <div class="hp-hero-art"><img :src="hero.image.src" :srcset="hero.image.srcset" sizes="(max-width: 720px) calc(100vw - 70px), (max-width: 1200px) calc((100vw - 130px) / 2), 510px" :width="hero.image.width" :height="hero.image.height" :alt="hero.image.alt" fetchpriority="high" decoding="async"></div>
     </div>
   </section>
 </template>

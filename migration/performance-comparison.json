@@ -1,0 +1,35 @@
+{
+  "scope": "Local loopback Lighthouse mobile simulation. Tracking is disabled by hostname; local server does not apply HTTP compression.",
+  "reports": {
+    "before": {
+      "scores": {
+        "performance": 61,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 5092.361956957609,
+        "largest-contentful-paint": 6851.917174174565,
+        "total-blocking-time": 86.5,
+        "cumulative-layout-shift": 0.1060341429349696
+      }
+    },
+    "after": {
+      "scores": {
+        "performance": 76,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 100
+      },
+      "metrics": {
+        "first-contentful-paint": 2848.789134808927,
+        "largest-contentful-paint": 5150.1837022133905,
+        "total-blocking-time": 74.5,
+        "cumulative-layout-shift": 0
+      }
+    }
+  },
+  "phase": "Initial CSS/image optimization, before final Elementor background and contrast corrections",
+  "finalPerformanceStatus": "Unavailable: Lighthouse navigation trace failed twice with NO_NAVSTART; do not report the initial score as the final score."
+}

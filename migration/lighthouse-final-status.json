@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-25T12:08:59.873Z",
+  "performanceMeasurement": "unavailable",
+  "attempts": 2,
+  "error": "NO_NAVSTART",
+  "meaning": "Lighthouse could not record the navigation trace. No final performance score is asserted.",
+  "initialComparison": "migration/performance-comparison.json",
+  "staticContentAndHttpChecks": "passed",
+  "quotePageFinal": {
+    "seo": 100,
+    "accessibility": 100,
+    "report": "migration/lighthouse-quote-final.json"
+  }
+}

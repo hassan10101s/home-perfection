@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-25T11:51:50.198Z",
+  "method": "Compare computed dimensions (2px tolerance), font, text, colors and display of headings, paragraphs, images, summaries and shared header/footer against the same HTML with original unpruned CSS. Both modes served locally; baseline disables hydration to retain original stylesheet links.",
+  "viewports": [
+    {
+      "width": 1280,
+      "pages": 13,
+      "differences": 0
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "pages": 13,
+      "differences": 0,
+      "horizontalOverflow": false
+    }
+  ],
+  "interactions": {
+    "mobileMenuOpen": true,
+    "mobileMenuEscapeClose": true,
+    "faqOpen": true,
+    "invalidPhoneBlocked": true,
+    "externalMessageSent": false
+  },
+  "limitations": [
+    "Comparison covers sampled element properties, not a pixel-by-pixel guarantee or all possible interaction states."
+  ],
+  "comparisonPhase": "CSS consolidation before the subsequent intentional visual corrections",
+  "intentionalCorrections": [
+    "Removed obsolete Elementor lazy-background blocking rules; background images/gradients now render without WordPress JavaScript.",
+    "Replaced quote-page empty Elementor columns/shortcode remnants with a compact native introduction, preserving the original heading and description.",
+    "Improved caption, pricing-note, post-navigation and WhatsApp-link contrast."
+  ]
+}

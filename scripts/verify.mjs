@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import { load } from 'cheerio';
 const manifest=JSON.parse(await readFile('content/manifest.json','utf8'));
 const baseline=JSON.parse(await readFile('migration/baseline.json','utf8'));
+const company=JSON.parse(await readFile('content/company.json','utf8'));
 const root='.output/public';let images=0,links=0;const errors=[];
 const redirects=new Map([['/company-services/','/moving-furniture-riyadh/'],['/نقل-عفش-الرس/','/شركة-نقل-عفش-بالقصيم/']]);
 const normalize=p=>decodeURI(p).replace(/\/$/,'')||'/';const paths=new Set(manifest.map(p=>normalize(p.path)));
@@ -14,7 +15,19 @@ for(const item of manifest){
   if(mode==='production')assert.equal($('meta[name=robots]').attr('content'),meta.meta.find(m=>m.name==='robots')?.content||'index, follow','robots differs from the original production directive');
   assert.equal($('title').text(),meta.title,'title changed');assert.equal($('link[rel=canonical]').attr('href'),meta.canonical,'canonical changed');
   for(const m of meta.meta.filter(m=>m.name==='description'||m.property?.startsWith('og:')))assert.equal($(`meta[${m.name?'name':'property'}="${m.name||m.property}"]`).attr('content'),m.content,`metadata changed: ${m.name||m.property}`);
-  assert.equal($('script[type="application/ld+json"]').length,meta.schema.length,'schema missing');
+  const renderedNodes=$('script[type="application/ld+json"]').toArray().flatMap(el=>{const doc=JSON.parse($(el).text());return doc['@graph']||[doc]});
+  const entityId=company.url+'#organization';
+  const entities=renderedNodes.filter(node=>node['@id']===entityId);
+  assert.equal(entities.length,1,'company identity duplicated or missing');assert.equal(entities[0].telephone,company.telephone);assert.equal(entities[0].name,company.name);
+  assert.deepEqual(renderedNodes.filter(node=>node['@id']!==entityId),meta.schema.flatMap(doc=>doc['@graph']||[doc]).filter(node=>node['@id']!==entityId),'non-company schema changed');
+  const legacyCompany=meta.schema.flatMap(doc=>doc['@graph']||[doc]).find(node=>node['@id']===entityId&&[node['@type']].flat().includes('MovingCompany'));
+  for(const field of ['address','geo','openingHoursSpecification','makesOffer','aggregateRating','priceRange'])if(legacyCompany?.[field])assert.deepEqual(entities[0][field],legacyCompany[field],`legacy company field changed: ${field}`);
+  assert.ok($('link[rel=stylesheet]').length<=2,'too many render-blocking stylesheets');
+  for(const link of $('link[rel=stylesheet]').toArray()){
+    const href=$(link).attr('href');
+    if(href?.startsWith('/assets/css/'))assert.ok(!(await readFile(path.join(root,href),'utf8')).includes(':not(.e-lazyloaded)'),'obsolete Elementor background gate remains');
+  }
+  if(item.id==='382'){assert.equal($('.hp-quote-intro').length,1);assert.equal($('.elementor-382,.wpcf7').length,0,'empty WordPress form layout remains');}
   const original=load(await readFile(`content/pages/${item.id}.html`,'utf8'));
   const text=s=>s.replace(/\s+/g,' ').trim();assert.ok(text($('#main-content').text()).includes(text(original('body').text())),'page text missing');
   assert.equal($('#main-content h1').length,item.path==='/'?1:original('h1').length,'H1 changed');
@@ -39,6 +52,11 @@ for(const file of await readdir(root,{recursive:true})){
 }
 const buildInfo=JSON.parse(await readFile(`${root}/build-info.json`,'utf8'));
 const rootHtml=load(await readFile(`${root}/index.html`,'utf8'));
+const companyFile=JSON.parse(await readFile(`${root}/company.json`,'utf8'));assert.equal(companyFile.telephone,company.telephone);assert.equal(companyFile.url,company.url);
+assert.ok((await readFile(`${root}/llms.txt`,'utf8')).includes(company.telephone));
+const worker=JSON.parse(await readFile('wrangler.jsonc','utf8'));assert.ok(!worker.main,'static site must not have a Worker JavaScript entry');assert.equal(worker.assets.directory,'./.output/public');
+assert.equal(JSON.parse(await readFile('.output/nitro.json','utf8')).preset,'static','build must use the static preset');
+assert.equal(await access('.output/server/index.mjs').then(()=>true,()=>false),false,'server entry must not be generated');
 if(buildInfo.environment==='production')assert.ok(!/noindex/.test(rootHtml('meta[name=robots]').attr('content')||''),'production is noindex');
 const headers=await readFile(`${root}/_headers`,'utf8');assert.ok(headers.includes("object-src 'none'")&&headers.includes("frame-ancestors 'none'"));
 const report={date:new Date().toISOString(),environment:buildInfo.environment,pages:manifest.length,assetReferences:images,cssReferences,internalLinks:links,errors,sourceBrokenLinks:baseline.failures,notes:['Tracking is restricted to the production build on homeperfectionnow.com.','Source Elementor content is retained as separate HTML files; the app shell and quote form are Vue components.']};

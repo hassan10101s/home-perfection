@@ -1,0 +1,19 @@
+{
+  "name": "البيت المثالي للخدمات المتكاملة",
+  "shortName": "البيت المثالي",
+  "alternateName": "Home Perfection",
+  "url": "https://homeperfectionnow.com/",
+  "telephone": "+966565964755",
+  "email": "info@homeperfectionnow.com",
+  "logo": "https://homeperfectionnow.com/wp-content/uploads/2024/11/cropped-home808.webp",
+  "description": "خدمات نقل الأثاث والفك والتركيب والتغليف في القصيم وبريدة والرياض.",
+  "serviceAreas": ["القصيم", "بريدة", "الرياض"],
+  "services": ["نقل الأثاث", "فك وتركيب الأثاث", "تغليف الأثاث"],
+  "sources": [
+    {"title": "الرئيسية والخدمات", "url": "https://homeperfectionnow.com/"},
+    {"title": "من نحن", "url": "https://homeperfectionnow.com/من-نحن/"},
+    {"title": "التواصل", "url": "https://homeperfectionnow.com/connect/"},
+    {"title": "نقل عفش بالرياض", "url": "https://homeperfectionnow.com/moving-furniture-riyadh/"},
+    {"title": "نقل عفش ببريدة", "url": "https://homeperfectionnow.com/نقل-عفش-بريدة/"}
+  ]
+}
