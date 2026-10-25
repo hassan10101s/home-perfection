@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-25T12:41:17.685Z",
+  "container": "GTM-NV4Z4B5",
+  "addedOrigin": "https://ad.doubleclick.net",
+  "directive": "connect-src",
+  "productionOnly": true,
+  "scriptAndImagePermissionsUnchanged": true,
+  "previewExcluded": true,
+  "testsPassed": 4,
+  "authorization": "Explicit owner approval in this conversation",
+  "source": "https://developers.google.com/tag-platform/security/guides/csp"
+}

@@ -27,9 +27,26 @@ test('explicit preview stays blocked and does not allow tracking domains', async
   const headers = await readFile(path.join(root, '_headers'), 'utf8');
   assert.ok(headers.includes('X-Robots-Tag: noindex, nofollow'));
   assert.ok(!headers.includes('statcounter.com'));
+  assert.ok(!headers.includes('https://ad.doubleclick.net'));
   assert.match(await readFile(path.join(root, 'robots.txt'), 'utf8'), /^Disallow: \/$/m);
 });
 test('noindex artifacts cannot be relabelled as production', async () => {
   const root = await fixture('noindex, nofollow');
   await assert.rejects(finalizeStaticSite(root, true), /Refusing to package/);
+});
+
+test('Google Ads collection is allowed only as a production connection', async () => {
+  const root = await fixture('index, follow');
+  await finalizeStaticSite(root, true);
+  const headers = await readFile(path.join(root, '_headers'), 'utf8');
+  const csp = headers.match(/Content-Security-Policy: (.+)/)[1];
+  const directives = new Map(csp.split(';').map(part => {
+    const [name, ...sources] = part.trim().split(/\s+/);
+    return [name, sources];
+  }));
+  assert.ok(directives.get('connect-src').includes('https://ad.doubleclick.net'));
+  assert.ok(!directives.get('script-src').includes('https://ad.doubleclick.net'));
+  assert.ok(!directives.get('img-src').includes('https://ad.doubleclick.net'));
+  assert.ok(!directives.get('connect-src').includes('*'));
+  assert.deepEqual(directives.get('object-src'), ["'none'"]);
 });
