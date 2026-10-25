@@ -3,6 +3,14 @@ import site from '../../content/site.json'
 export default defineNuxtPlugin(() => {
   if (!useRuntimeConfig().public.productionSite || location.hostname !== 'homeperfectionnow.com') return
   const w = window as any
+  w.sc_project = site.statcounter.project
+  w.sc_security = site.statcounter.security
+  w.sc_invisible = site.statcounter.invisible
+  w.sc_https = 1
+  const counter = document.createElement('script')
+  counter.async = true
+  counter.src = 'https://www.statcounter.com/counter/counter.js'
+  document.head.appendChild(counter)
   w.dataLayer = w.dataLayer || []
   w.gtag = function () { w.dataLayer.push(arguments) }
   w.gtag('js', new Date())

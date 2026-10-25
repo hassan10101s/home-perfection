@@ -9,7 +9,7 @@ for(const file of files){if(!/\.(?:vue|ts|mjs|json|html|md|css|txt)$/.test(file)
 const pages=JSON.parse(await readFile('content/manifest.json','utf8'));
 for(const page of pages){const $=load(await readFile(`content/pages/${page.id}.html`,'utf8'));assert.equal($('script').length,0);$(' *').each((_,el)=>{for(const [key,value] of Object.entries(el.attribs||{})){assert.ok(!/^on/i.test(key),`Inline event in ${page.path}`);if(['src','href','action','xlink:href'].includes(key))assert.ok(!/^(?:javascript|vbscript|data:text\/html):/i.test(value.replace(/[\u0000-\u0020]/g,'')),`Unsafe URL in ${page.path}`);}});}
 const headers=await readFile('.output/public/_headers','utf8');
-for(const rule of ["object-src 'none'","frame-ancestors 'none'","base-uri 'self'","form-action 'none'",'X-Content-Type-Options: nosniff','Strict-Transport-Security: max-age=31536000'])assert.ok(headers.includes(rule),`Missing ${rule}`);
+for(const rule of ["object-src 'none'","frame-ancestors 'none'","base-uri 'self'","form-action 'none'",'X-Content-Type-Options: nosniff','Strict-Transport-Security: max-age=63072000','Cross-Origin-Opener-Policy: same-origin-allow-popups','https://www.statcounter.com/counter/counter.js'])assert.ok(headers.includes(rule),`Missing ${rule}`);
 assert.ok(!headers.includes("'unsafe-eval'"));
 assert.ok(!headers.match(/script-src[^;]*'unsafe-inline'/));
 const $=load(await readFile('.output/public/index.html','utf8'));

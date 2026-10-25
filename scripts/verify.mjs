@@ -10,13 +10,15 @@ const normalize=p=>decodeURI(p).replace(/\/$/,'')||'/';const paths=new Set(manif
 for(const item of manifest){
  try{
   const html=await readFile(path.join(root,item.path,'index.html'),'utf8');const $=load(html);const meta=JSON.parse(await readFile(`content/pages/${item.id}.json`,'utf8'));
+  const mode=JSON.parse(await readFile(`${root}/build-info.json`,'utf8')).environment;
+  if(mode==='production')assert.equal($('meta[name=robots]').attr('content'),meta.meta.find(m=>m.name==='robots')?.content||'index, follow','robots differs from the original production directive');
   assert.equal($('title').text(),meta.title,'title changed');assert.equal($('link[rel=canonical]').attr('href'),meta.canonical,'canonical changed');
   for(const m of meta.meta.filter(m=>m.name==='description'||m.property?.startsWith('og:')))assert.equal($(`meta[${m.name?'name':'property'}="${m.name||m.property}"]`).attr('content'),m.content,`metadata changed: ${m.name||m.property}`);
   assert.equal($('script[type="application/ld+json"]').length,meta.schema.length,'schema missing');
   const original=load(await readFile(`content/pages/${item.id}.html`,'utf8'));
   const text=s=>s.replace(/\s+/g,' ').trim();assert.ok(text($('#main-content').text()).includes(text(original('body').text())),'page text missing');
-  assert.equal($('#main-content h1').length,original('h1').length,'H1 changed');
-  assert.deepEqual($('#main-content .hp-page-content h1, #main-content .hp-page-content h2, #main-content .hp-page-content h3').map((_,e)=>$(e).text().replace(/\s+/g,'')).get(),baseline.pages.find(p=>p.id===item.id).headings.map(s=>s.replace(/\s+/g,'')),'original headings changed');
+  assert.equal($('#main-content h1').length,item.path==='/'?1:original('h1').length,'H1 changed');
+  assert.deepEqual($('#main-content h1, #main-content h2, #main-content h3').filter((_,e)=>!$(e).closest('.hp-quote').length).map((_,e)=>$(e).text().replace(/\s+/g,'')).get(),baseline.pages.find(p=>p.id===item.id).headings.map(s=>s.replace(/\s+/g,'')),'original headings changed');
   assert.equal($('#main-content script').length,0,'legacy scripts remain');assert.equal($('[onclick],[onerror],[onload]').length,0,'inline event handlers remain');
   const tasks=[];
   $('img[src],source[src],source[srcset],video[src],link[rel=stylesheet],link[rel=icon],link[rel=apple-touch-icon]').each((_,el)=>{const n=$(el);const urls=n.attr('srcset')?n.attr('srcset').split(',').map(s=>s.trim().split(/\s+/)[0]):[n.attr('src')||n.attr('href')];for(const u of urls){if(u?.startsWith('/')){images++;tasks.push(access(path.join(root,decodeURI(u.split('?')[0]))).catch(()=>errors.push(`${item.path}: missing asset ${u}`)))}}});

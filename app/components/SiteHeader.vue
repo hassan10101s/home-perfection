@@ -41,7 +41,7 @@ const links = [
 <template>
   <a class="hp-skip" href="#main-content">تخطي إلى المحتوى</a>
   <header class="hp-desktop-header">
-    <a href="/" aria-label="البيت المثالي، الرئيسية"><img src="/wp-content/uploads/2024/11/cropped-home808-74x50.webp" width="74" height="50" alt="البيت المثالي"></a>
+    <a href="/" aria-label="البيت المثالي، الرئيسية"><img src="/wp-content/uploads/2024/11/cropped-home808-74x50.webp" srcset="/wp-content/uploads/2024/11/cropped-home808-74x50.webp 74w, /wp-content/uploads/2024/11/cropped-home808-300x202.webp 300w" sizes="74px" width="74" height="50" alt="البيت المثالي"></a>
     <nav aria-label="القائمة الرئيسية" class="hp-desktop-links">
       <template v-for="(link, index) in links" :key="link.to">
         <details v-if="index === 3" class="hp-services"><summary>خدمتنا</summary><div><a href="/moving-furniture-riyadh/">نقل عفش بالرياض</a><a href="/دينا-نقل-عفش-بالرياض/">دينا نقل عفش بالرياض</a><a href="/نقل-عفش-بريدة/">نقل عفش ببريدة</a></div></details>
@@ -50,7 +50,7 @@ const links = [
     </nav>
   </header>
   <header ref="mobileHeader" class="hp-mobile-navigation" :class="{ 'is-scrolled': scrolled, 'is-open': menuOpen }">
-    <a href="/" class="hp-brand"><img src="/wp-content/uploads/2024/11/cropped-home808-74x50.webp" width="74" height="50" alt="البيت المثالي"></a>
+    <a href="/" class="hp-brand"><img src="/wp-content/uploads/2024/11/cropped-home808-74x50.webp" srcset="/wp-content/uploads/2024/11/cropped-home808-74x50.webp 74w, /wp-content/uploads/2024/11/cropped-home808-300x202.webp 300w" sizes="74px" width="74" height="50" alt="البيت المثالي"></a>
     <button ref="menuButton" type="button" :aria-expanded="menuOpen" aria-controls="mobile-menu" @click="menuOpen = !menuOpen">{{ menuOpen ? 'إغلاق القائمة ×' : 'القائمة ☰' }}</button>
     <nav v-if="menuOpen" id="mobile-menu" aria-label="القائمة الرئيسية">
       <a v-for="link in links" :key="link.to" :href="link.to" :aria-current="isCurrent(link.to) ? 'page' : undefined" @click="closeMenu()">{{ link.label }}</a>

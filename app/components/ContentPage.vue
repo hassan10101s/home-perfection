@@ -2,6 +2,7 @@
 const props = defineProps<{ page: any }>()
 const production = useRuntimeConfig().public.productionSite
 const page = props.page
+const hasMainLandmark = /<main(?:\s|>)/i.test(page.html)
 useHead({
   title: page.title,
   bodyAttrs: { class: page.bodyClass.replace(/\b(ast-header-break-point|elementor-invisible)\b/g, '') + ' hp-migrated' },
@@ -17,7 +18,8 @@ useHead({
 <template>
   <div id="page" class="hfeed site">
     <SiteHeader />
-    <div id="main-content" tabindex="-1">
+    <div id="main-content" tabindex="-1" :role="hasMainLandmark ? undefined : 'main'">
+      <slot name="before-content" />
       <div class="hp-page-content" v-html="page.html" />
       <QuoteForm v-if="page.isQuote" />
     </div>

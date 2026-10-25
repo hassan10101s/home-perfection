@@ -18,7 +18,8 @@ const server=http.createServer(async(req,res)=>{
     for(const line of headerText.split('\n\n')[0].split('\n').slice(1)){
       const colon=line.indexOf(':');if(colon>0)res.setHeader(line.slice(0,colon).trim(),line.slice(colon+1).trim());
     }
-    res.writeHead(status,{'Content-Type':types[path.extname(file)]||'application/octet-stream','X-Robots-Tag':'noindex, nofollow','X-Content-Type-Options':'nosniff'});
+    // Only the loopback Lighthouse audit opts into production indexing headers.
+    res.writeHead(status,{'Content-Type':types[path.extname(file)]||'application/octet-stream',...(process.env.AUDIT_PRODUCTION==='1'?{}:{'X-Robots-Tag':'noindex, nofollow'}),'X-Content-Type-Options':'nosniff'});
     res.end(data);
   }catch{res.writeHead(400);res.end('Bad request')}
 });

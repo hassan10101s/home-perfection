@@ -1,0 +1,13 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { load } from 'cheerio';
+const file='content/pages/12.html';
+const $=load(await readFile(file,'utf8'),null,false);
+const image=$('.elementor-element-813dece');
+const text=$('.elementor-element-a1e6043');
+if(!image.length||!text.length)throw new Error('Original hero already extracted or unavailable');
+const img=image.find('img').first();
+const links=text.find('a.elementor-button');
+const hero={title:text.find('h1').text().trim(),image:{src:img.attr('src'),srcset:img.attr('srcset'),alt:img.attr('alt'),width:Number(img.attr('width')),height:Number(img.attr('height'))},actions:links.map((_,el)=>({href:$(el).attr('href'),text:$(el).text().replace(/\s+/g,' ').trim()})).get()};
+await writeFile('content/home-hero.json',JSON.stringify(hero,null,2));
+image.remove();text.remove();
+await writeFile(file,$.html());

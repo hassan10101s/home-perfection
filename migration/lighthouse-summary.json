@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-25T06:47:51.112Z",
+  "url": "http://127.0.0.1:3004/",
+  "lighthouseVersion": "13.5.0",
+  "scores": {
+    "accessibility": 100,
+    "best-practices": 100,
+    "seo": 100
+  },
+  "checks": {
+    "crawlable": 1,
+    "contrast": 1,
+    "linksDistinguishable": 1,
+    "mainLandmark": 1
+  },
+  "scope": "Local production build with production headers; search ranking and public deployment are verified separately."
+}

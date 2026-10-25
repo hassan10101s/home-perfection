@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "nuxt dev --host 127.0.0.1",
     "generate": "node scripts/build.mjs",
+    "build": "node scripts/build.mjs",
     "generate:production": "node scripts/build.mjs --production",
+    "generate:preview": "node scripts/build.mjs --preview",
     "preview": "node scripts/serve.mjs",
     "migrate": "node scripts/migrate.mjs",
     "verify": "node scripts/verify.mjs"

@@ -50,3 +50,8 @@
 .hp-migrated .hp-call:not(.hp-whatsapp){background:var(--hp-navy)}
 .hp-migrated .hp-whatsapp{bottom:84px;background:#17834a}
 @media(max-width:921px){.hp-migrated .hp-whatsapp{bottom:calc(88px + env(safe-area-inset-bottom,0px))}}
+/* Readable contrast on all three original service cards. */
+.hp-migrated #page .elementor-element-e134128 :is(.elementor-element-1a045f9,.elementor-element-8f425ce,.elementor-element-7c122f7){background:#f4f7fb;border:1px solid #dce4ee;border-radius:14px;padding:24px}
+.hp-migrated #page .elementor-element-e134128 :is(.elementor-element-1a045f9,.elementor-element-8f425ce,.elementor-element-7c122f7) :is(h2,h3,p){color:#233e70}
+.hp-migrated .hp-footer a{text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.hp-migrated .hp-page-content :is(p,li,h2,h3,h4) a:not(.elementor-button){text-decoration:underline;text-underline-offset:3px}
