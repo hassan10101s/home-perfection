@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-26T11:30:23.538Z",
+  "container": "GTM-NV4Z4B5",
+  "productionOnly": true,
+  "additions": [
+    {
+      "directive": "connect-src",
+      "source": "https://analytics.google.com"
+    },
+    {
+      "directive": "img-src",
+      "source": "https://www.google.com.eg"
+    }
+  ],
+  "previousAdsCollectionPermissionPreserved": true,
+  "scriptPermissionsUnchanged": true,
+  "previewExcluded": true,
+  "testsPassed": 5,
+  "source": "https://developers.google.com/tag-platform/security/guides/csp"
+}

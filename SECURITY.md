@@ -9,6 +9,7 @@
 - أكواد Google القديمة مُفعّلة بموافقة المالك على الدومين الرسمي فقط. إعدادات حاوية GTM الخاصة لم تُراجع من الموقع العام.
 - Statcounter مُستعاد بطلب المالك وبنفس المشروع ورمز التحقق العام من المصدر، ويعمل على الإنتاج والدومين الرسمي فقط.
 - بموافقة المالك، يُسمح لـ`https://ad.doubleclick.net` داخل `connect-src` على الإنتاج فقط، لإرسال طلبات قياس Google Ads التي حظرها CSP سابقًا. لا يضاف المصدر إلى `script-src` أو `img-src` ولا إلى بناء المعاينة. تبقى الحاوية `GTM-NV4Z4B5` كما هي. [متطلبات CSP الرسمية من Google](https://developers.google.com/tag-platform/security/guides/csp).
+- لتصحيح طلبات Google الحالية المحظورة، يضاف `https://analytics.google.com` إلى `connect-src` فقط، و`https://www.google.com.eg` إلى `img-src` فقط، في الإنتاج دون المعاينة. السماح القديم بـ`*.analytics.google.com` لا يغطي اسم المضيف `analytics.google.com` نفسه. لم تُضف مصادر سكربتات أو صلاحيات `unsafe-eval` أو `unsafe-inline` للسكربتات.
 - HSTS مدته سنتان للدومين نفسه، دون `includeSubDomains` أو `preload`؛ لم يُتحقق من HTTPS لخدمات البريد ولوحات الإدارة القديمة. لا تُفرض هاتان الخاصيتان لمجرد إزالة تحذير Lighthouse.
 - COOP يستخدم `same-origin-allow-popups` للحماية مع الحفاظ على توافق النوافذ الخارجية. لا يُفرض COEP لأنه قد يمنع خرائط Google والموارد الخارجية الحالية.
 - Trusted Types وCSP الصارمة المعتمدة على `strict-dynamic` لم تُفرض على كود Google/Statcounter وحقن Cloudflare دون اختبار توافق مستقل. CSP الحالية تمنع inline/eval غير المصرح بهما وتسمح للمصادر المطلوبة؛ قد تبقى تنبيهات Lighthouse الإرشادية، وهي منفصلة عن درجة SEO.

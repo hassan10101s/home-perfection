@@ -28,6 +28,8 @@ test('explicit preview stays blocked and does not allow tracking domains', async
   assert.ok(headers.includes('X-Robots-Tag: noindex, nofollow'));
   assert.ok(!headers.includes('statcounter.com'));
   assert.ok(!headers.includes('https://ad.doubleclick.net'));
+  assert.ok(!headers.includes('https://analytics.google.com'));
+  assert.ok(!headers.includes('https://www.google.com.eg'));
   assert.match(await readFile(path.join(root, 'robots.txt'), 'utf8'), /^Disallow: \/$/m);
 });
 test('noindex artifacts cannot be relabelled as production', async () => {
@@ -49,4 +51,22 @@ test('Google Ads collection is allowed only as a production connection', async (
   assert.ok(!directives.get('img-src').includes('https://ad.doubleclick.net'));
   assert.ok(!directives.get('connect-src').includes('*'));
   assert.deepEqual(directives.get('object-src'), ["'none'"]);
+});
+
+test('Analytics collection and regional Ads images stay in their required directives', async () => {
+  const root = await fixture('index, follow');
+  await finalizeStaticSite(root, true);
+  const headers = await readFile(path.join(root, '_headers'), 'utf8');
+  const directives = new Map(headers.match(/Content-Security-Policy: (.+)/)[1].split(';').map(part => {
+    const [name, ...sources] = part.trim().split(/\s+/);
+    return [name, sources];
+  }));
+  assert.ok(directives.get('connect-src').includes('https://analytics.google.com'));
+  assert.ok(directives.get('img-src').includes('https://www.google.com.eg'));
+  for (const [name, sources] of directives) {
+    if (name !== 'connect-src') assert.ok(!sources.includes('https://analytics.google.com'));
+    if (name !== 'img-src') assert.ok(!sources.includes('https://www.google.com.eg'));
+  }
+  assert.ok(!headers.includes("'unsafe-eval'"));
+  assert.ok(!directives.get('script-src').includes("'unsafe-inline'"));
 });
